@@ -1,4 +1,4 @@
-# Laporan Proyek Sistem Rekomendasi - Albert Ewaldo Arthur Daeli
+# Laporan Proyek Akhir Sistem Rekomendasi - Albert Ewaldo Arthur Daeli
 
 ## Project Review
 
@@ -39,17 +39,21 @@ Berikut ini adalah link dataset yang saya pakai : https://www.kaggle.com/dataset
 7. original language : Merupakan jenis bahasa resmi pada film.	
 8. original title : Merupakan jenis judul resmi pada film.	
 9. overview : Merupakan gambaran atau keterangan pada jenis film.	
-10. popularity : Digunakan untuk menentukan seberapa banyak orang yang menyukai film.	
-11. runtime : Merupakan jenis yang menghitung waktu atau durasi pada film.	
-12. spoken languages : Merupakan jenis bahasa yang digunakan dalam film.	
-13. status : Digunakan untuk menampilkan apakah film sudah di rilis atau tidak.	
-14. tagline : Merupakan deskripsi singat pada film.	
-15. title : Merupakan judul pada film.	
-16. vote average : Merupakan nilai rata-rata pada voting atau pilihan. 	
-17. vote count : Merupakan jumlah voting atau pilihan pada film.	
-18. cast : Merupakan pemain yang memerankan sebuah karakter pada film.	
-19. crew : Merupakan orang yang membuat sebuah film.	
-20. director : Merupakan orang yang menjalankan sebuah film sesuai dengan skenario.
+10. popularity : Digunakan untuk menentukan seberapa banyak orang yang menyukai film.
+11. Production Companies : Merupakan Sebuah perusahaan yang menciptakan sebuah produksi film.
+12. production Countries : Merupakan letak negara pada suatu perusahaan.
+13. Release Date : Merupakan tanggal rilis pada suatu film
+14. Revenue : Merupakan pendapatan atau jumlah uang yang di dapat pada suatu produksi film	
+15. runtime : Merupakan jenis yang menghitung waktu atau durasi pada film.	
+16. spoken languages : Merupakan jenis bahasa yang digunakan dalam film.	
+17. status : Digunakan untuk menampilkan apakah film sudah di rilis atau tidak.	
+18. tagline : Merupakan deskripsi singat pada film.	
+19. title : Merupakan judul pada film.	
+20. vote average : Merupakan nilai rata-rata pada voting atau pilihan. 	
+21. vote count : Merupakan jumlah voting atau pilihan pada film.	
+22. cast : Merupakan pemain yang memerankan sebuah karakter pada film.	
+23. crew : Merupakan orang yang membuat sebuah film.	
+24. director : Merupakan orang yang menjalankan sebuah film sesuai dengan skenario.
 
 ## Data Preparation
 
@@ -77,13 +81,14 @@ Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut 
    yang berjudul "Rush Hour 2", kemudian saya mendapatkan 9 rekomendasi film yang mirip berdasarkan genre atau jenis film yaitu action
 
 ## Evaluasi
+Pada tahap evaluasi ini, Metrik yang saya pakai adalah Accuracy Score, Confusion Matrix, dan Classification Report :
 
-pada tahap evaluasi ini, saya memakai tfidf vectorizer yang digunakan untuk menentukan nilai frekuensi sebuah kata dalam suatu data. maka dari itu saya 
-memanggil fungsi "tfidf = TfidfVectorizer(stop_words = 'english')" yang digunakan untuk menampilkan bawaan bahasa inggris, kemudian fungsi "data['genres'] = data['genres'].fillna('')"
-yang digunakan untuk shorting data pada data genre, kemudian fungsi "tfidf_matrix = tfidf.fit_transform(data['genres'])" yang digunakan untuk memasukan 
-data genre kedalam vector, setelah itu fungsi "tfidf_matrix.shape" yang digunakan untuk menampilkan ukuran data genre yang sudah dimasukan kedalam vector.
-
-data pertama yang saya dapat adalah 4803, dan data kedua yang saya dapat adalah 22
+1. Accuracy Score = Merupakan rasio prediksi benar baik itu positif maupun negatif terhadap keseluruhan data. Hasil akurasi yang saya dapat adalah 1.0
+2. Confusion Matrix = Merupakan pengukuran performa untuk masalah klasifikasi machine learning, Dimana keluaran dapat berupa kelas atau lebih. Hasil confusion matrix yang saya dapat adalah 3.0.0.
+3. Classification Report = Merupakan proses memprediksi nilai pada yang terdiri dari 3 metrik yaitu Precision, Recall, dan F1-Score.
+   1. Precision = Merupakan kecocokan antara bagian antara bagian data yang diambil dengan informasi yang dibutuhkan. Nilai presisi yang saya dapatkan adalah 1.00
+   2. Recall = Merupakan tingkat keberhasilan sistem dalam menemukan kembali sebuah informasi. Nilai Recall yang saya dapatkan adalah 1.00
+   3. F1-Score = Merupakan data yang menggambarkan perbandingan rata-rata precision dan recall yang dibobotkan. Nilai yang saya dapatkan dari F1-Score adalah 1.00
 
 ## Kesimpulan
 
