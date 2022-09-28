@@ -85,6 +85,13 @@ Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut 
 9. Kemudian, saya memanggil fungsi "indices = pd.Series(data.index, index=data['title']).drop_duplicates()" yang digunakan untuk mengidentifikasi index pada film berdasarkan judul film
 10. Setelah itu, saya memanggil fungsi "cosine_sim" yang digunakan untuk menampilkan nilai matriks kesamaan kosinus dalam bentuk array. Hasil yang saya dapat adalah sebagai berikut.
 11. ![Image 01](https://user-images.githubusercontent.com/111255438/192813605-7646d3fc-0c35-4bfd-80cf-e53dfb9018a4.png)
+12. Setelah itu, saya membuat sistem rekomendasi dengan memanggil fungsi "def get_recommendation(title, cosine_sim=cosine_sim):" yang berisikan fungsi "idx = indices[title]" yang digunakan untuk mendapatkan index film berdasarkan judul film
+13. Kemudian, saya memanggil fungsi "sim_scores" yang digunakan untuk mendapatkan daftar skor kesamaan kosinus, untuk film tertentu dengan film lainnya.
+14. Berikutnya, saya memanggil fungsi "sim_scores = sim_scores[1:11]" yang digunakan untuk mendapatkan 10 elemen teratas pada suatu film.
+15. Kemudian, saya memanggil fungsi " output = pd.DataFrame([data['title'].iloc[movie_indices], data['genres'].iloc[movie_indices]])" yang digunakan untuk menampilkan rekomendasi berdasarkan judul film dan jenis pada film.
+16. Setelah itu, saya memanggil fungsi "get_recommendation" yang digunakan untuk menampilkan rekomendasi film berdasarkan judul dan jenis film. outputnya adalah sebagai berikut.
+17. ![Image 03](https://user-images.githubusercontent.com/111255438/192828520-e6dd20e7-b4cd-45b9-8b22-19defc24f709.png)
+18. Pada gambar diatas, disini saya memasukan judul film yang mempunyai kesamaan genre yaitu action, kemudian saya masukan judul Rush Hour 2 dikarenakan genre film ini adalah action, maka output yang keluar adalah 10 film yang mempunyai kesamaan genre yaitu action.
 
 
 ## Evaluasi
