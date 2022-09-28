@@ -90,7 +90,7 @@ Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut 
 14. Berikutnya, saya memanggil fungsi "sim_scores = sim_scores[1:11]" yang digunakan untuk mendapatkan 10 elemen teratas pada suatu film.
 15. Kemudian, saya memanggil fungsi " output = pd.DataFrame([data['title'].iloc[movie_indices], data['genres'].iloc[movie_indices]])" yang digunakan untuk menampilkan rekomendasi berdasarkan judul film dan jenis pada film.
 16. Setelah itu, saya memanggil fungsi "get_recommendation" yang digunakan untuk menampilkan rekomendasi film berdasarkan judul dan jenis film. outputnya adalah sebagai berikut.
-17. ![Image 03](https://user-images.githubusercontent.com/111255438/192828520-e6dd20e7-b4cd-45b9-8b22-19defc24f709.png)
+17. ![Image 04](https://user-images.githubusercontent.com/111255438/192830282-b63fee83-a113-4434-a408-d178fcb40d6e.png)
 18. Pada gambar diatas, disini saya memasukan judul film yang mempunyai kesamaan genre yaitu action, kemudian saya masukan judul Rush Hour 2 dikarenakan genre film ini adalah action, maka output yang keluar adalah 10 film yang mempunyai kesamaan genre yaitu action.
 
 
