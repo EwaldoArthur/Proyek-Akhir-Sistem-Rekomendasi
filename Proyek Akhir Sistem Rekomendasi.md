@@ -55,28 +55,26 @@ Berikut ini adalah link dataset yang saya pakai : https://www.kaggle.com/dataset
 
 Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut :
 
-1.Load Library Python : Digunakan untuk mengimport atau memuat beberapa library dalam membuat sistem rekomendasi.
-2.Load Dataset : Digunakan untuk memuat dataset yang dipakai untuk membuat sistem rekomendasi.
-3.Handling Missing Values : : Pada tahap ini digunakan untuk memeriksa atau checking data apakah terdapat missing values atau data yang kosong atau tidak. 
-Data yang saya pakai beberapa ada yang missing values dan ada yang tidak.
-4.Exploratory Data Analysis (EDA) : Digunakan untuk melihat data dalam bentuk diagram. data yang dilihat berupa Data Popularity, Data vote average atau nilai rata-rata
+1. Load Library Python : Digunakan untuk mengimport atau memuat beberapa library dalam membuat sistem rekomendasi.
+2. Load Dataset : Digunakan untuk memuat dataset yang dipakai untuk membuat sistem rekomendasi.
+3. Handling Missing Values : Pada tahap ini digunakan untuk memeriksa atau checking data apakah terdapat missing values atau data yang kosong atau tidak. 
+   Data yang saya pakai beberapa ada yang missing values dan ada yang tidak.
+4. Exploratory Data Analysis (EDA) : Digunakan untuk melihat data dalam bentuk diagram. data yang dilihat berupa Data Popularity, Data vote average atau nilai rata-rata yang memilih film, dan Data Count atau jumlah yang memilih film 
 ![image](https://user-images.githubusercontent.com/111255438/192695256-738f20f4-6751-42df-a6b3-8cff23ad2ec8.png) 
 - Pada tabel diatas menunjukan bahwa data popularity paling ada di angka lebih dari 800, dan data kedua ada di bawah angka 800
 ![image](https://user-images.githubusercontent.com/111255438/192695588-4e33693f-4405-444f-aed2-8cd26fec8520.png) 
 -  Pada tabel diatas menunjukan bahwa data average atau nilai rata-rata pilihan paling tinggi berada di angka 8, dan vote count atau jumlah pilihan berada di angka 14000
 
-
-yang memilih film, dan Data Count atau jumlah yang memilih film 
-5.Modeling :Digunakan untuk membuat fitur pada sistem rekomendasi.
-6.Recommendation : Digunakan untuk membuat rekomendasi film berdasarkan judul dan genre.
+5. Modeling :Digunakan untuk membuat fitur pada sistem rekomendasi.
+6. Recommendation : Digunakan untuk membuat rekomendasi film berdasarkan judul dan genre.
 
 ## Modeling
 
-1.Pada tahapan modeling ini, pertama saya menggunakan fungsi "idx = indices[title]" yang digunakan untuk memanggil index film berdasarkan title atau judul.
-2.Tahap kedua adalah "sim_scores" yang digunakan untuk mendapatkan daftar skor kesamaan kosinus, untuk film tertentu dengan film lainnya.
-3.Tahap Ketiga adalah fungsi "sim_scores = sim_scores[1:11]" yang digunakan untuk mendapatkan 10 elemen teratas pada suatu film.
-4.Kemudian saya memanggil get_recommendation untuk mendapatkan rekomendasi film berdasarkan kemiripan genre. disini saya memasukan judul film action 
-yang berjudul "Rush Hour 2", kemudian saya mendapatkan 9 rekomendasi film yang mirip berdasarkan genre atau jenis film yaitu action
+1. Pada tahapan modeling ini, pertama saya menggunakan fungsi "idx = indices[title]" yang digunakan untuk memanggil index film berdasarkan title atau judul.
+2. Tahap kedua adalah "sim_scores" yang digunakan untuk mendapatkan daftar skor kesamaan kosinus, untuk film tertentu dengan film lainnya.
+3. Tahap Ketiga adalah fungsi "sim_scores = sim_scores[1:11]" yang digunakan untuk mendapatkan 10 elemen teratas pada suatu film.
+4. Kemudian saya memanggil get_recommendation untuk mendapatkan rekomendasi film berdasarkan kemiripan genre. disini saya memasukan judul film action 
+   yang berjudul "Rush Hour 2", kemudian saya mendapatkan 9 rekomendasi film yang mirip berdasarkan genre atau jenis film yaitu action
 
 ## Evaluasi
 
