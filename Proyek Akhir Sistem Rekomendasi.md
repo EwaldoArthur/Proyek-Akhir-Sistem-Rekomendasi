@@ -1,34 +1,34 @@
 #Laporan Proyek Sistem Rekomendasi - Albert Ewaldo Arthur Daeli
 
-##Project Review
+## Project Review
 
 Film merupakan salah satu hiburan yang sangat digemari oleh masyarakat. Kegiatan menonton film ini memiliki manfaat yang positif bagi penontonnya. 
 menonton film dapat menghilangkan rasa jenuh, stress dan emosi yang tidak beraturan. selain itu dengan menonton film, kita juga dapat mempelajari 
 bahasa asing.
 
-##Business Understanding
+## Business Understanding
 
 oleh karena itu saya membuat sistem rekomendasi film untuk menghasilkan kumpulan film yang mungkin akan disukai oleh pengguna dengan menggunakan 
 metode Content-based filtering : Memberikan rekomendasi berdasarkan kemiripan atribut dari item atau barang yang disukai. 
 Pada sistem rekomendasi film kemiripan berdasarkan atribut yang dimiliki oleh film seperti genre atau jenis film.
 
-##Problem Statements
+## Problem Statements
 
 1. Bagaimana cara membuat sistem rekomendasi film yang sesuai dengan keinginan pengguna?
 2. Apa saja yang harus diketahui agar mendapatkan rekomendasi film yang sesuai dengan keinginan pengguna?
 
-##Goals
+## Goals
 
 1. Menggunakan metode Content Based Filtering agar bisa merekomendasikan film berdasarkan kemiripan jenis film.
 2. Merekomendasikan Judul film berdasarkan Genre Film yang sesuai dengan keinginan pengguna.
 
-##Data Understanding
+## Data Understanding
 
 Data yang saya pakai pada proyek ini adalah data yang bisa digunakan untuk merekomendasikan film yaitu Movie Recommendation yang saya unduh dari 
 website "kaggle.com". Dataset ini memiliki 4803 data sampel dan 24 kolom. 
 Berikut ini adalah link dataset yang saya pakai : https://www.kaggle.com/datasets/lucifierx/movie-recommendation
 
-##Variabel-variabel pada Movie Recommendation Dataset : 
+## Variabel-variabel pada Movie Recommendation Dataset : 
 
 1.index : Merupakan nomor urut pada film.
 2.budget : Merupakan Biaya Produksi pada film.
@@ -51,7 +51,7 @@ Berikut ini adalah link dataset yang saya pakai : https://www.kaggle.com/dataset
 19.crew : Merupakan orang yang membuat sebuah film.	
 20.director : Merupakan orang yang menjalankan sebuah film sesuai dengan skenario.
 
-##Data Preparation
+## Data Preparation
 
 Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut :
 
@@ -60,15 +60,17 @@ Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut 
 3.Handling Missing Values : : Pada tahap ini digunakan untuk memeriksa atau checking data apakah terdapat missing values atau data yang kosong atau tidak. 
 Data yang saya pakai beberapa ada yang missing values dan ada yang tidak.
 4.Exploratory Data Analysis (EDA) : Digunakan untuk melihat data dalam bentuk diagram. data yang dilihat berupa Data Popularity, Data vote average atau nilai rata-rata
-![image](https://user-images.githubusercontent.com/111255438/192695256-738f20f4-6751-42df-a6b3-8cff23ad2ec8.png) - Pada tabel diatas menunjukan bahwa data popularity paling ada di angka lebih dari 800, dan data kedua ada di bawah angka 800
-![image](https://user-images.githubusercontent.com/111255438/192695588-4e33693f-4405-444f-aed2-8cd26fec8520.png) -  Pada tabel diatas menunjukan bahwa data average atau nilai rata-rata pilihan paling tinggi berada di angka 8, dan vote count atau jumlah pilihan berada di angka 14000
+![image](https://user-images.githubusercontent.com/111255438/192695256-738f20f4-6751-42df-a6b3-8cff23ad2ec8.png) 
+- Pada tabel diatas menunjukan bahwa data popularity paling ada di angka lebih dari 800, dan data kedua ada di bawah angka 800
+![image](https://user-images.githubusercontent.com/111255438/192695588-4e33693f-4405-444f-aed2-8cd26fec8520.png) 
+-  Pada tabel diatas menunjukan bahwa data average atau nilai rata-rata pilihan paling tinggi berada di angka 8, dan vote count atau jumlah pilihan berada di angka 14000
 
 
 yang memilih film, dan Data Count atau jumlah yang memilih film 
 5.Modeling :Digunakan untuk membuat fitur pada sistem rekomendasi.
 6.Recommendation : Digunakan untuk membuat rekomendasi film berdasarkan judul dan genre.
 
-##Modeling
+## Modeling
 
 1.Pada tahapan modeling ini, pertama saya menggunakan fungsi "idx = indices[title]" yang digunakan untuk memanggil index film berdasarkan title atau judul.
 2.Tahap kedua adalah "sim_scores" yang digunakan untuk mendapatkan daftar skor kesamaan kosinus, untuk film tertentu dengan film lainnya.
@@ -76,7 +78,7 @@ yang memilih film, dan Data Count atau jumlah yang memilih film
 4.Kemudian saya memanggil get_recommendation untuk mendapatkan rekomendasi film berdasarkan kemiripan genre. disini saya memasukan judul film action 
 yang berjudul "Rush Hour 2", kemudian saya mendapatkan 9 rekomendasi film yang mirip berdasarkan genre atau jenis film yaitu action
 
-##Evaluasi
+## Evaluasi
 
 pada tahap evaluasi ini, saya memakai tfidf vectorizer yang digunakan untuk menentukan nilai frekuensi sebuah kata dalam suatu data. maka dari itu saya 
 memanggil fungsi "tfidf = TfidfVectorizer(stop_words = 'english')" yang digunakan untuk menampilkan bawaan bahasa inggris, kemudian fungsi "data['genres'] = data['genres'].fillna('')"
@@ -85,6 +87,6 @@ data genre kedalam vector, setelah itu fungsi "tfidf_matrix.shape" yang digunaka
 
 data pertama yang saya dapat adalah 4803, dan data kedua yang saya dapat adalah 22
 
-##Kesimpulan
+## Kesimpulan
 
 Dengan adanya sistem rekomendasi film yang saya buat agar pengguna bisa mengetahui ada film apa saja yang sesuai dengan genre yang mereka akan tonton
