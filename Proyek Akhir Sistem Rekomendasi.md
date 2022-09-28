@@ -74,11 +74,18 @@ Tahapan yang saya pakai untuk membuat sistem rekomendasi adalah sebagai berikut 
 
 ## Modeling
 
-1. Pada tahapan modeling ini, pertama saya menggunakan fungsi "idx = indices[title]" yang digunakan untuk memanggil index film berdasarkan title atau judul.
-2. Tahap kedua adalah "sim_scores" yang digunakan untuk mendapatkan daftar skor kesamaan kosinus, untuk film tertentu dengan film lainnya.
-3. Tahap Ketiga adalah fungsi "sim_scores = sim_scores[1:11]" yang digunakan untuk mendapatkan 10 elemen teratas pada suatu film.
-4. Kemudian saya memanggil get_recommendation untuk mendapatkan rekomendasi film berdasarkan kemiripan genre. disini saya memasukan judul film action 
-   yang berjudul "Rush Hour 2", kemudian saya mendapatkan 9 rekomendasi film yang mirip berdasarkan genre atau jenis film yaitu action
+1. pada tahap evaluasi ini, saya memakai tfidf vectorizer yang digunakan untuk menentukan nilai frekuensi sebuah kata dalam suatu data.
+2. Kemudian saya memanggil fungsi "tfidf = TfidfVectorizer(stop_words = 'english')" yang digunakan untuk menampilkan bawaan bahasa inggris. 
+3. kemudian fungsi "data['genres'] = data['genres'].fillna('')" yang digunakan untuk shorting data pada data genre. 
+4. kemudian fungsi "tfidf_matrix = tfidf.fit_transform(data['genres'])" yang digunakan untuk memasukan data genre kedalam vector. 
+5. Setelah itu fungsi "tfidf_matrix.shape" yang digunakan untuk menampilkan ukuran data genre yang sudah dimasukan kedalam vector. data pertama yang saya dapat        adalah 4803, dan data kedua yang saya dapat adalah 22
+6. Kemudian, saya memanggil fungsi "tfidf_matrix.todense()" yang digunakan menampilkan untuk data vektor tfidf yang diubah dalam bentuk matrix. Hasil yang saya dapat adalah sebagai berikut.
+7. ![Image 02](https://user-images.githubusercontent.com/111255438/192812372-ee5e4d66-5040-4fd6-bf9c-d0a20afee8b0.png)
+8. Kemudian, setelah saya menghitung data tfidf, saya memanggil fungsi "cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)" yang digunakan untuk menghitung matriks kesamaan cosinus.
+9. Kemudian, saya memanggil fungsi "indices = pd.Series(data.index, index=data['title']).drop_duplicates()" yang digunakan untuk mengidentifikasi index pada film berdasarkan judul film
+10. Setelah itu, saya memanggil fungsi "cosine_sim" yang digunakan untuk menampilkan nilai matriks kesamaan kosinus dalam bentuk array. Hasil yang saya dapat adalah sebagai berikut.
+11. ![Image 01](https://user-images.githubusercontent.com/111255438/192813605-7646d3fc-0c35-4bfd-80cf-e53dfb9018a4.png)
+
 
 ## Evaluasi
 Pada tahap evaluasi ini, Metrik yang saya pakai adalah Accuracy Score, Confusion Matrix, dan Classification Report :
