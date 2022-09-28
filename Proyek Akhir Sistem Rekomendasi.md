@@ -30,26 +30,26 @@ Berikut ini adalah link dataset yang saya pakai : https://www.kaggle.com/dataset
 
 ## Variabel-variabel pada Movie Recommendation Dataset : 
 
-1.index : Merupakan nomor urut pada film.
-2.budget : Merupakan Biaya Produksi pada film.
-3.genres : Merupakan jenis atau kategori pada film.	
-4.homepage : Merupakan link website pada film.	
-5.id : Merupakan nomor objek pada film.	
-6.keywords : Merupakan jenis kata kunci untuk mencari film.	
-7.original language : Merupakan jenis bahasa resmi pada film.	
-8.original title : Merupakan jenis judul resmi pada film.	
-9.overview : Merupakan gambaran atau keterangan pada jenis film.	
-10.popularity : Digunakan untuk menentukan seberapa banyak orang yang menyukai film.	
-11.runtime : Merupakan jenis yang menghitung waktu atau durasi pada film.	
-12.spoken languages : Merupakan jenis bahasa yang digunakan dalam film.	
-13.status : Digunakan untuk menampilkan apakah film sudah di rilis atau tidak.	
-14.tagline : Merupakan deskripsi singat pada film.	
-15.title : Merupakan judul pada film.	
-16.vote average : Merupakan nilai rata-rata pada voting atau pilihan. 	
-17.vote count : Merupakan jumlah voting atau pilihan pada film.	
-18.cast : Merupakan pemain yang memerankan sebuah karakter pada film.	
-19.crew : Merupakan orang yang membuat sebuah film.	
-20.director : Merupakan orang yang menjalankan sebuah film sesuai dengan skenario.
+1. index : Merupakan nomor urut pada film.
+2. budget : Merupakan Biaya Produksi pada film.
+3. genres : Merupakan jenis atau kategori pada film.	
+4. homepage : Merupakan link website pada film.	
+5. id : Merupakan nomor objek pada film.	
+6. keywords : Merupakan jenis kata kunci untuk mencari film.	
+7. original language : Merupakan jenis bahasa resmi pada film.	
+8. original title : Merupakan jenis judul resmi pada film.	
+9. overview : Merupakan gambaran atau keterangan pada jenis film.	
+10. popularity : Digunakan untuk menentukan seberapa banyak orang yang menyukai film.	
+11. runtime : Merupakan jenis yang menghitung waktu atau durasi pada film.	
+12. spoken languages : Merupakan jenis bahasa yang digunakan dalam film.	
+13. status : Digunakan untuk menampilkan apakah film sudah di rilis atau tidak.	
+14. tagline : Merupakan deskripsi singat pada film.	
+15. title : Merupakan judul pada film.	
+16. vote average : Merupakan nilai rata-rata pada voting atau pilihan. 	
+17. vote count : Merupakan jumlah voting atau pilihan pada film.	
+18. cast : Merupakan pemain yang memerankan sebuah karakter pada film.	
+19. crew : Merupakan orang yang membuat sebuah film.	
+20. director : Merupakan orang yang menjalankan sebuah film sesuai dengan skenario.
 
 ## Data Preparation
 
